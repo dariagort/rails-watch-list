@@ -74,3 +74,6 @@ gem "sassc-rails"
 
 #gem to hide the keys from git
 gem "dotenv-rails", groups: [:development, :test]
+
+#cloud for photos
+gem "cloudinary"

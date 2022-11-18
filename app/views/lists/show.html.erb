@@ -2,10 +2,9 @@
 
 
 <div>
- <%= @list.bookmarks.each do |bookmark| %>
-    <li><%= image_tag bookmark.movie.poster_url</li> %>
-    <li><%= bookmark.comment %></li>
- <% end %>
+  <% if @list.photo.attached? %>
+      <%= cl_image_tag @list.photo.key, height: 300, width: 400, crop: :fill %>
+    <% end %>
 </div>
 
 <%= link_to "Delete list",
