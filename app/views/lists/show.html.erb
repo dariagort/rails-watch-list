@@ -3,7 +3,7 @@
 
 <div>
  <%= @list.bookmarks.each do |bookmark| %>
-    <li><%= image_tag bookmark.movie.poster_url %></li>
+    <li><%= image_tag bookmark.movie.poster_url</li> %>
     <li><%= bookmark.comment %></li>
  <% end %>
 </div>
