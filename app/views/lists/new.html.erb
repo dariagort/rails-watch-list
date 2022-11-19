@@ -1,11 +1,11 @@
-<h1>Start a new list!</h1>
 
-
-<%= simple_form_for (@list) do |f| %>
-  <%= f.input :name %>
-  <%= f.input :photo, as: :file %>
-  <%= f.submit %>
-<% end %>
-
-
-<%= link_to "Back to My Lists", lists_path %>
+<div class="container">
+  <h2 class="pb-5">Start a new list</h2>
+  <div class="form">
+    <%= simple_form_for (@list) do |f| %>
+      <%= f.input :name %>
+      <%= f.input :photo, as: :file %>
+      <%= f.submit %>
+    <% end %>
+  </div>
+</div>

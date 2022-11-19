@@ -1,11 +1,17 @@
 <h2><%= @list.name %></h2>
 
 
-<div>
-  <% if @list.photo.attached? %>
-      <%= cl_image_tag @list.photo.key, height: 300, width: 400, crop: :fill %>
-    <% end %>
-</div>
+<% @list.bookmarks.each do |bookmark| %>
+  <div class="card-trip">
+    <%= cl_image_tag @list.bookmark.photo.key%>
+    <div class="card-trip-infos">
+      <div>
+        <h2><%= @bookmark.title %></h2>
+        <p><%= @bookmark.content %></p>
+      </div>
+    </div>
+  </div>
+<% end %>
 
 <%= link_to "Delete list",
   list_path(@list),
