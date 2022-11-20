@@ -21,4 +21,3 @@ movies.each do |movie|
     poster_url: movie['poster_path']
   )
 end
-

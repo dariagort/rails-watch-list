@@ -4,18 +4,17 @@
 
 <div class= "container">
   <div  class="cards">
-    <div class="card-category">
-      <%= link_to "+", new_list_path, class: "card" %>
-    </div>
+    <%= link_to new_list_path, :class => "card-category" do %>
+      <div class="card-category" style="background-color:#FFBD23">
+        <h1>Add a new list</h1>
+      </div>
+    <% end %>
     <% @lists.each do |list| %>
-      <% if list.photo.attached? %>
-        <%= link_to list_path(list) do %>
-          <div class="card-category" style="background-image: url(<%= cl_image_tag list.photo.key, height: 300, width: 400, crop: :fill %>)">
-            <%= list.name %>
-          </div>
-        <% end %>
+      <%= link_to list_path(list), :class => "card-category" do %>
+        <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= list.photo.attached? ? cl_image_path(list.photo.key) : asset_path('camera_rolling.jpg')%>)">
+          <%= list.name %>
+        </div>
       <% end %>
     <% end %>
   </div>
 </div>
-

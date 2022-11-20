@@ -4,13 +4,27 @@
   padding: 8px 24px;
   border-radius: 50px;
   font-weight: lighter;
-  opacity: 0.6;
+  transition: opacity 0.3s ease;
+}
+
+.btn-ghost-yellow {
+  background-color: $blue;
+  color: $white;
+  border: 1px solid #f8f5f5;
+  padding: 8px 24px;
+  border-radius: 50px;
+  font-weight: bold;
+  transition: opacity 0.3s ease;
+}
+
+.btn-ghost-yellow:hover {
+  background-color: $yellow;
   transition: opacity 0.3s ease;
 }
 
 .btn-ghost:hover {
-  background: #fced1f;
-  color: rgb(0, 0, 0);
+  background: $yellow;
+  color: #ffffff;
 }
 
 .btn-flat {
